@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITNESS FUSION</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#1a1a1a',
+                        darker: '#0a0a0a',
+                        primary: '#E02B33',
+                        secondary: '#FFD700',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #f1f1f1;
+            scroll-behavior: smooth;
+        }
+
+        .card-glow {
+            box-shadow: 0 0 10px rgba(224, 43, 51, 0.5), 0 0 20px rgba(224, 43, 51, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .card-glow:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(224, 43, 51, 0.7), 0 0 40px rgba(224, 43, 51, 0.5);
+        }
+
+        .btn-glow {
+            box-shadow: 0 0 10px rgba(224, 43, 51, 0.5);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .btn-glow:hover {
+            box-shadow: 0 0 20px rgba(224, 43, 51, 0.7), 0 0 30px rgba(224, 43, 51, 0.5);
+            transform: scale(1.05);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in-item {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-darker text-gray-200">
+
+    <!-- Header -->
+    <header class="bg-dark text-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary">FITNESS FUSION</a>
+            <div class="space-x-4 hidden md:flex">
+                <a href="#about" class="hover:text-primary transition duration-300">Tentang</a>
+                <a href="#membership" class="hover:text-primary transition duration-300">Keanggotaan</a>
+                <a href="#contact" class="hover:text-primary transition duration-300">Kontak</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="py-16 md:py-24 bg-cover bg-center" style="background-image: url('/assets/gym_banner.png');">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4 fade-in-item" style="animation-delay: 0.2s;">TRANSFORMASI TUBUHMU</h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto fade-in-item" style="animation-delay: 0.4s;">
+                Bergabunglah dengan komunitas kami dan mulailah perjalanan kebugaranmu hari ini.
+            </p>
+            <a href="#membership" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-red-700 transition duration-300 btn-glow fade-in-item" style="animation-delay: 0.6s;">
+                Lihat Paket Keanggotaan
+            </a>
+        </div>
+    </main>
+    
+    <!-- About Section -->
+    <section id="about" class="container mx-auto px-6 py-16 md:py-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="fade-in-item" style="animation-delay: 0.8s;">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary">TENTANG KAMI</h2>
+                <p class="text-lg text-gray-400 mb-6">
+                    FITNESS FUSION bukan hanya gym, ini adalah tempat di mana Anda bisa mencapai potensi diri sepenuhnya. Kami menyediakan peralatan terkini, pelatih profesional, dan lingkungan yang mendukung untuk membantu Anda mencapai tujuan kebugaran Anda.
+                </p>
+                <ul class="space-y-3 text-gray-300">
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Peralatan latihan modern
+                    </li>
+                    <li class="flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Kelas kebugaran beragam
+                    </li>
+                </ul>
+            </div>
+            <div class="relative fade-in-item" style="animation-delay: 1.0s;">
+                <img src="/assets/gym_interface.png" alt="Gym Interior" class="rounded-xl shadow-2xl">
+                <div class="absolute inset-0 bg-black bg-opacity-40 rounded-xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Cards Section -->
+    <section id="membership" class="bg-dark py-16 md:py-24">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 fade-in-item">PAKET KEANGGOTAAN</h2>
+            <p class="text-gray-400 max-w-2xl mx-auto mb-12 fade-in-item" style="animation-delay: 0.2s;">
+                Pilih paket yang paling sesuai dengan tujuan kebugaran Anda dan mulailah perjalananmu menuju versi diri terbaik.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Beginner Card -->
+                <div class="bg-darker rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 fade-in-item card-glow" style="animation-delay: 0.4s;">
+                    <h3 class="text-2xl font-bold text-white mb-2">BEGINNER</h3>
+                    <p class="text-primary text-4xl font-extrabold mb-4">Rp 250k<span class="text-lg text-gray-400 font-normal">/bulan</span></p>
+                    <ul class="text-gray-400 text-left space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Akses fasilitas gym
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Sesi pengenalan dengan pelatih
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Program latihan dasar
+                        </li>
+                    </ul>
+                    <button class="bg-primary text-white font-bold py-3 px-8 rounded-full w-full hover:bg-red-700 transition duration-300 btn-glow">
+                        Pilih Paket
+                    </button>
+                </div>
+
+                <!-- Intermediate Card -->
+                <div class="bg-darker rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 border-2 border-primary fade-in-item card-glow" style="animation-delay: 0.6s;">
+                    <h3 class="text-2xl font-bold text-white mb-2">INTERMEDIATE</h3>
+                    <p class="text-primary text-4xl font-extrabold mb-4">Rp 450k<span class="text-lg text-gray-400 font-normal">/bulan</span></p>
+                    <ul class="text-gray-400 text-left space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Semua keuntungan Beginner
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Akses ke semua kelas (yoga, zumba, dll)
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Sesi konsultasi bulanan dengan pelatih
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Akses sauna dan steam room
+                        </li>
+                    </ul>
+                    <button class="bg-primary text-white font-bold py-3 px-8 rounded-full w-full hover:bg-red-700 transition duration-300 btn-glow">
+                        Pilih Paket
+                    </button>
+                </div>
+
+                <!-- Pro Card -->
+                <div class="bg-darker rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300 fade-in-item card-glow" style="animation-delay: 0.8s;">
+                    <h3 class="text-2xl font-bold text-white mb-2">PRO</h3>
+                    <p class="text-primary text-4xl font-extrabold mb-4">Rp 750k<span class="text-lg text-gray-400 font-normal">/bulan</span></p>
+                    <ul class="text-gray-400 text-left space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Semua keuntungan Intermediate
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Sesi latihan pribadi tak terbatas
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Rencana nutrisi yang dipersonalisasi
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            Prioritas reservasi kelas
+                        </li>
+                    </ul>
+                    <button class="bg-primary text-white font-bold py-3 px-8 rounded-full w-full hover:bg-red-700 transition duration-300 btn-glow">
+                        Pilih Paket
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="contact" class="bg-darker py-16 md:py-24 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 fade-in-item" style="animation-delay: 1.2s;">SIAP UNTUK BERUBAH?</h2>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto fade-in-item" style="animation-delay: 1.4s;">
+                Jangan tunda lagi. Mulailah perjalanan kebugaranmu sekarang. Hubungi kami untuk informasi lebih lanjut atau kunjungi tempat kami.
+            </p>
+            <a href="mailto:info@fitnessfusion.com" class="inline-block bg-primary text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-red-700 transition duration-300 btn-glow fade-in-item" style="animation-delay: 1.6s;">
+                Hubungi Kami
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-400 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 FITNESS FUSION. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animasi fade-in saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            const fadeItems = document.querySelectorAll('.fade-in-item');
+            fadeItems.forEach(item => {
+                observer.observe(item);
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
